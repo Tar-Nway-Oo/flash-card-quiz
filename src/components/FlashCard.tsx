@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { cards } from "../App";
+import { card } from "../App";
 import "../index.css"
 
 
-export default function FlashCard({answer, question, options}: cards) {
+export default function FlashCard({question, options, answer}: card) {
 
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -13,7 +13,7 @@ export default function FlashCard({answer, question, options}: cards) {
           <p className="question">{question}</p>
           <ul className="options">
             {options.map(option => (
-              <li key={option}>{option}</li>
+              <li className="option" key={option}>{option}</li>
              ))}
           </ul>
         </div>

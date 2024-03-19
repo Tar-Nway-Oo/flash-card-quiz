@@ -5,7 +5,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 80%);
+}
+
+.app {
+  min-width: 500px;
 }
 
 .form {
@@ -14,6 +18,17 @@ body {
   display: flex;
   gap: 2em;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.input-group > select, .input-group > input {
+  padding: .5em;
 }
 
 .generate-btn {
@@ -25,10 +40,11 @@ body {
 }
 
 .generate-btn:hover, .generate-btn:focus {
-  opacity: .9;
+  opacity: .8;
 }
 
 .card-container {
+  padding: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1em;
@@ -64,7 +80,6 @@ body {
 
 .question,.answer {
   font-size: 1.2rem;
-  font-weight: bold;
   margin: 0;
 }
 
@@ -79,10 +94,10 @@ body {
 
 .options {
  margin-top: 2em;
- color: rgb(70, 63, 63);
+ color: hsl(0, 0%, 30%);
 }
 
-.options > li {
+.option {
   line-height: 1.3em;
 }
 
